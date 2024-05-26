@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить рецепт</title>
+    <link rel="stylesheet" href="./css/new_recipe.css">
+</head>
+<body>
+    <div class="container">
+        <form class="add__recipe" enctype="multipart/form-data">
+            <div class="form__header">
+                <a href="index.html">←</a>
+                <h1>Добавить рецепт</h1>
+            </div>
+            <div class="form__content">
+                <div class="recipe__info">
+                    <div class="recipe__info__name">
+                        <h2>Название блюда</h2>
+                        <input type="text" class="recipe__name" name="name" required>
+                    </div>
+                    <div class="reciep__info__description">
+                        <h2>Описание</h2>
+                        <input type="text" class="recipe__description" name="description" required>
+                    </div>
+                    <div class="recipe__info__preview">
+                        <h2>Главное фото</h2>
+                        <label for="main__image" class="add__image">Добавить фото</label>
+                        <div class="remove__image">x</div>
+                        <input type="file" class="main__image" name="main__image" accept=".png" id="main__image">
+                    </div>
+                </div>
+                <div class="ingredients__wrapper">
+                    <h2>Ингредиенты</h2>
+                    <ul class="ingredients">
+                        <li class="ingredient__wrapper main">
+                            <input type="text" class="ingredient" name="ingredient">
+                            <input type="number" class="ingredient__num" min="0" value = "0" name="ingredient_num">
+                            <select name="unit" id="" class="unit">
+                                <option value="Кг">Кг</option>
+                                <option value="Гр">Гр</option>
+                                <option value="Л">Л</option>
+                                <option value="Мл">Мл</option>
+                                <option value="Шт">Шт</option>
+                            </select>
+                            <div class="button__remove">x</div>
+                        </li>
+                        <div class="button__add ingredient__button">Добавить ингредиент</div>
+                    </ul>
+                </div> 
+                <div class="steps__wrapper">
+                    <h2>Этапы приготовления</h2>
+                    <ul class="steps">
+                        <li class="step__wrapper main">
+                            <div class="input__wrapper">
+                                <input type="text" class="step" name="step">
+                                <div class="button__remove">x</div>
+                            </div>
+                            <div class="label__wrapper">
+                                <label for="step1" class="add__image">Загрузить фото к этапу</label>
+                                <div class="remove__image">x</div>
+                                <input type="file" class="step__image" accept=".png" id = "step1" name="step1">
+                            </div>
+                        </li>
+                        <div class="button__add step__button">Добавить этап</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="form__footer">
+                <p class="author">Рецепт будет опубликован от имени пользователя </p>
+                <button class="button__submit">Добавить рецепт</button>
+            </div>
+        </form>
+    </div>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/new_recipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="./css/reg.css">
+</head>
+<body>
+    <form class="auth">
+        <label for="name">Имя</label>
+        <input type="input" name="name" id="name">
+        <label for="email">Почта</label>
+        <input type="input" name="email" id="email">
+        <label for="login">Логин</label>
+        <input type="input" name="login" id="login">
+        <label for="password">Пароль</label>
+        <input type="password" name="password" id="password">
+        <button type="button" onclick="reg()">Регистрация</button>
+        <a href="auth.html" class="button__reg">Вход</a>
+    </form>
+    <a href="index.html" class="button__return">Вернуться на сайт</a>
+<script src="./scripts/jquery.js"></script>
+<script src="./scripts/reg.js"></script>
+</body>
+</html>
